@@ -289,11 +289,9 @@
                     return;
                 }
                 
-                // Logic to handle separator visibility (only show if filter is empty, or if they match the filter text exactly, 
-                // though usually we keep separators visible to structure the list if the filter is inactive)
+                // Logic to handle separator visibility
                 if (item.isSeparator && filter) {
-                    // For active filters, skip separators unless you want them to clutter the filtered list
-                    // We'll hide them unless the user searches for the separator name itself (e.g. "tek")
+                    // When actively filtering, only show separators if their name matches the filter
                     if (optionNameLower.indexOf(filter) === -1) {
                         return;
                     }
@@ -389,11 +387,16 @@
             }, 2000);
         }
 
-        // Initialize the command output and dropdown on load
-        window.onload = function() {
+        // Initialize the command output and dropdown safely using DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', function() {
             // Set the default to item (0)
             isBlueprintCheckbox.checked = false; 
 
             // Initialize the dropdown and filter
             populateDropdown(); 
             // The initial generateCommand() is now handled inside populateDropdown() to ensure synchronization.
+        });
+
+    </script>
+</body>
+</html>
