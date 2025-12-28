@@ -42,7 +42,7 @@
             <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-2">
                 <span class="text-ark-accent">ArkLegendsPVE</span> Master Database
             </h1>
-            <p class="text-gray-300 text-lg">Verified Alphabetical Master List</p>
+            <p class="text-gray-300 text-lg">Verified Alphabetical Master List - Permanent Record</p>
         </header>
 
         <section class="space-y-6">
@@ -54,7 +54,7 @@
 
             <div id="blueprintPathContainer">
                 <label for="saddleSearch" class="block text-sm font-medium text-gray-300 mb-1">Search Every Saddle</label>
-                <input type="text" id="saddleSearch" placeholder="Search (e.g. Rex, Frog, Malwyn)..." onkeyup="filterSaddles()"
+                <input type="text" id="saddleSearch" placeholder="Search (e.g. Malwyn, Giga, Gigadesmodus)..." onkeyup="filterSaddles()"
                        class="w-full px-4 py-3 border border-ark-accent/30 rounded-lg focus:ring-ark-accent focus:border-ark-accent shadow-inner bg-ark-primary text-white mb-4">
                 
                 <label for="blueprintSelector" class="block text-sm font-medium text-gray-300 mb-1">Select Saddle</label>
@@ -103,7 +103,7 @@
         const copyMessage = document.getElementById('copyMessage');
         const saddleSearchInput = document.getElementById('saddleSearch');
 
-        // CLEANED & VERIFIED DATABASE
+        // PERMANENT ALPHABETICAL MASTER DATABASE
         const saddleBlueprints = [
             { name: "Achatina (Snail) Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_AchatinaSaddle.PrimalItemArmor_AchatinaSaddle'" },
             { name: "Allosaurus Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_AlloSaddle.PrimalItemArmor_AlloSaddle'" },
@@ -137,6 +137,8 @@
             { name: "Flameforge Dragon Saddle (DC)", path: "Blueprint'/DraconicChronicles/Saddles/FlameforgeDragon/PrimalItemArmor_FlameforgeDragonSaddle.PrimalItemArmor_FlameforgeDragonSaddle'" },
             { name: "Gallimimus Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_GalliSaddle.PrimalItemArmor_GalliSaddle'" },
             { name: "Gasbags Saddle", path: "Blueprint'/Game/Extinction/CoreBlueprints/Items/Saddle/PrimalItemArmor_GasBagsSaddle.PrimalItemArmor_GasBagsSaddle'" },
+            { name: "Gigadesmodus Platform Saddle (Lost Colony)", path: "Blueprint'/Game/LostColony/Dinos/BossBat/Saddle/PrimalItemArmor_BossBatSaddle_Platform.PrimalItemArmor_BossBatSaddle_Platform'" },
+            { name: "Gigadesmodus Saddle (Lost Colony)", path: "Blueprint'/Game/LostColony/Dinos/BossBat/Saddle/PrimalItemArmor_BossBatSaddle.PrimalItemArmor_BossBatSaddle'" },
             { name: "Giganotosaurus Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_GigantSaddle.PrimalItemArmor_GigantSaddle'" },
             { name: "Glaucus Saddle (Modded)", path: "Blueprint'/Glaucus/Content/Saddle/PrimalItemArmor_GlaucusSaddle.PrimalItemArmor_GlaucusSaddle'" },
             { name: "Helicoprion Saddle", path: "Blueprint'/Game/ASA/Dinos/Helicoprion/Saddle/PrimalItemArmor_Helicoprion.PrimalItemArmor_Helicoprion'" },
