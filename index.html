@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArkLegendsPVE Master Database</title>
+    <title>ArkLegendsPVE PERMANENT MASTER DATABASE</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -42,19 +42,19 @@
             <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-2">
                 <span class="text-ark-accent">ArkLegendsPVE</span> Master Database
             </h1>
-            <p class="text-gray-300 text-lg">Every Verified Saddle - 100% Accurate Alphabetical List</p>
+            <p class="text-gray-300 text-lg">Verified Alphabetical Master List - Permanent Record</p>
         </header>
 
         <section class="space-y-6">
             <div>
-                <label for="characterId" class="block text-sm font-medium text-gray-300 mb-1">Target Character ID (Optional)</label>
+                <label for="characterId" class="block text-sm font-medium text-gray-300 mb-1">Target Character ID</label>
                 <input type="text" id="characterId" placeholder="Leave blank for self"
                     class="w-full px-4 py-3 border border-ark-accent/30 rounded-lg focus:ring-ark-accent focus:border-ark-accent shadow-inner bg-ark-primary text-white">
             </div>
 
             <div id="blueprintPathContainer">
-                <label for="saddleSearch" class="block text-sm font-medium text-gray-300 mb-1">Search Database (No Removals)</label>
-                <input type="text" id="saddleSearch" placeholder="Type name (e.g. Aureliax, Rex, Malwyn)..." onkeyup="filterSaddles()"
+                <label for="saddleSearch" class="block text-sm font-medium text-gray-300 mb-1">Search Every Saddle</label>
+                <input type="text" id="saddleSearch" placeholder="Search (e.g. Aureliax, Malwyn, Rex, Gigadesmodus)..." onkeyup="filterSaddles()"
                        class="w-full px-4 py-3 border border-ark-accent/30 rounded-lg focus:ring-ark-accent focus:border-ark-accent shadow-inner bg-ark-primary text-white mb-4">
                 
                 <label for="blueprintSelector" class="block text-sm font-medium text-gray-300 mb-1">Select Saddle</label>
@@ -103,7 +103,7 @@
         const copyMessage = document.getElementById('copyMessage');
         const saddleSearchInput = document.getElementById('saddleSearch');
 
-        // VERIFIED ALPHABETICAL SADDLE LIST
+        // PERMANENT ALPHABETICAL MASTER DATABASE - NO DELETIONS
         const saddleBlueprints = [
             { name: "Achatina (Snail) Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_AchatinaSaddle.PrimalItemArmor_AchatinaSaddle'" },
             { name: "Allosaurus Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_AlloSaddle.PrimalItemArmor_AlloSaddle'" },
@@ -127,21 +127,21 @@
             { name: "Carbonemys Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_TurtleSaddle.PrimalItemArmor_TurtleSaddle'" },
             { name: "Carnotaurus Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_CarnoSaddle.PrimalItemArmor_CarnoSaddle'" },
             { name: "Castoroides Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_BeaverSaddle.PrimalItemArmor_BeaverSaddle'" },
-            { name: "Ceratosaurus Saddle (Official)", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_CeratosaurusSaddle.PrimalItemArmor_CeratosaurusSaddle'" },
+            { name: "Ceratosaurus Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_CeratosaurusSaddle.PrimalItemArmor_CeratosaurusSaddle'" },
             { name: "Chalicotherium Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_ChalicotheriumSaddle.PrimalItemArmor_ChalicotheriumSaddle'" },
             { name: "Cryolophosaurus Saddle", path: "Blueprint'/Game/ASA/Dinos/Cryolophosaurus/Saddle/PrimalItemArmor_CryoSaddle.PrimalItemArmor_CryoSaddle'" },
             { name: "Daeodon Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_DaeodonSaddle.PrimalItemArmor_DaeodonSaddle'" },
-            { name: "Deinosuchus Saddle (Official)", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_DeinosuchusSaddle.PrimalItemArmor_DeinosuchusSaddle'" },
+            { name: "Deinosuchus Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_DeinosuchusSaddle.PrimalItemArmor_DeinosuchusSaddle'" },
             { name: "Diplodocus Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_DiplodocusSaddle.PrimalItemArmor_DiplodocusSaddle'" },
             { name: "Dire Bear Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_DirebearSaddle.PrimalItemArmor_DirebearSaddle'" },
             { name: "Doedicurus Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_DoedicurusSaddle.PrimalItemArmor_DoedicurusSaddle'" },
             { name: "Dragonkin Brawler Saddle (DC)", path: "Blueprint'/DraconicChronicles/Saddles/Dragonkin/PrimalItemArmor_DragonkinSaddle_Brawler.PrimalItemArmor_DragonkinSaddle_Brawler'" },
             { name: "Dragonkin Saddle (DC)", path: "Blueprint'/DraconicChronicles/Saddles/Dragonkin/PrimalItemArmor_DragonkinSaddle.PrimalItemArmor_DragonkinSaddle'" },
-            { name: "Dreadnoughtus Platform Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_DreadnoughtusSaddle_Platform.PrimalItemArmor_DreadnoughtusSaddle_Platform'" },
+            { name: "Dreadnoughtus Platform Saddle", path: "Blueprint'/Game/ASA/Dinos/Dreadnoughtus/PrimalItemArmor_DreadSaddle_Platform.PrimalItemArmor_DreadSaddle_Platform'" },
             { name: "Dunkleosteus Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_DunkleosteusSaddle.PrimalItemArmor_DunkleosteusSaddle'" },
             { name: "Ember Wyvern Armor (DC)", path: "Blueprint'/DraconicChronicles/Saddles/EmberWyvern/PrimalItemArmor_EmberArmor.PrimalItemArmor_EmberArmor'" },
             { name: "Equus Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_EquusSaddle.PrimalItemArmor_EquusSaddle'" },
-            { name: "Fasolasuchus Saddle (Official)", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_FasolasuchusSaddle.PrimalItemArmor_FasolasuchusSaddle'" },
+            { name: "Fasolasuchus Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_FasolasuchusSaddle.PrimalItemArmor_FasolasuchusSaddle'" },
             { name: "Fire Wyvern Armor (DC)", path: "Blueprint'/DraconicChronicles/Saddles/FireWyvern/PrimalItemArmor_FireWyvernArmor.PrimalItemArmor_FireWyvernArmor'" },
             { name: "Flameforge Dragon Saddle (DC)", path: "Blueprint'/DraconicChronicles/Saddles/FlameforgeDragon/PrimalItemArmor_FlameforgeDragonSaddle.PrimalItemArmor_FlameforgeDragonSaddle'" },
             { name: "Frog Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_ToadSaddle.PrimalItemArmor_ToadSaddle'" },
@@ -149,7 +149,7 @@
             { name: "Gasbags Saddle", path: "Blueprint'/Game/Extinction/CoreBlueprints/Items/Saddle/PrimalItemArmor_GasBagsSaddle.PrimalItemArmor_GasBagsSaddle'" },
             { name: "Gigadesmodus Platform Saddle (Lost Colony)", path: "Blueprint'/Game/LostColony/Dinos/BossBat/Saddle/PrimalItemArmor_BossBatSaddle_Platform.PrimalItemArmor_BossBatSaddle_Platform'" },
             { name: "Gigadesmodus Saddle (Lost Colony)", path: "Blueprint'/Game/LostColony/Dinos/BossBat/Saddle/PrimalItemArmor_BossBatSaddle.PrimalItemArmor_BossBatSaddle'" },
-            { name: "Gigantoraptor Saddle (Official)", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_GigantoraptorSaddle.PrimalItemArmor_GigantoraptorSaddle'" },
+            { name: "Gigantoraptor Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_GigantoraptorSaddle.PrimalItemArmor_GigantoraptorSaddle'" },
             { name: "Giganotosaurus Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_GigantSaddle.PrimalItemArmor_GigantSaddle'" },
             { name: "Glaucus Saddle (Modded)", path: "Blueprint'/Glaucus/Content/Saddle/PrimalItemArmor_GlaucusSaddle.PrimalItemArmor_GlaucusSaddle'" },
             { name: "Helicoprion Saddle", path: "Blueprint'/Game/ASA/Dinos/Helicoprion/Saddle/PrimalItemArmor_Helicoprion.PrimalItemArmor_Helicoprion'" },
@@ -159,13 +159,14 @@
             { name: "Iguanodon Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_IguanodonSaddle.PrimalItemArmor_IguanodonSaddle'" },
             { name: "Kangaroo Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_ProcoptodonSaddle.PrimalItemArmor_ProcoptodonSaddle'" },
             { name: "Kaprosuchus Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_KaprosuchusSaddle.PrimalItemArmor_KaprosuchusSaddle'" },
-            { name: "Karkinos Saddle", path: "Blueprint'/Game/Aberration/Dinos/Crab/PrimalItemArmor_CrabSaddle.PrimalItemArmor_CrabSaddle'" },
+            { name: "Karkinos (Crab) Saddle", path: "Blueprint'/Game/Aberration/Dinos/Crab/PrimalItemArmor_CrabSaddle.PrimalItemArmor_CrabSaddle'" },
             { name: "Lightning Wyvern Armor (DC)", path: "Blueprint'/DraconicChronicles/Saddles/LightningWyvern/PrimalItemArmor_LightningWyvernArmor.PrimalItemArmor_LightningWyvernArmor'" },
-            { name: "Lymantria (Moth) Saddle", path: "Blueprint'/Game/ScorchedEarth/Dinos/Moth/PrimalItemArmor_MothSaddle.PrimalItemArmor_MothSaddle'" },
+            { name: "Lymantria Saddle", path: "Blueprint'/Game/ScorchedEarth/Dinos/Moth/PrimalItemArmor_MothSaddle.PrimalItemArmor_MothSaddle'" },
             { name: "Malwyn Saddle (Devil Fox)", path: "Blueprint'/Game/LostColony/Dinos/DevilFox/PrimalItemArmor_DevilFoxSaddle.PrimalItemArmor_DevilFoxSaddle'" },
             { name: "Mammoth Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_MammothSaddle.PrimalItemArmor_MammothSaddle'" },
             { name: "Manta Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_MantaSaddle.PrimalItemArmor_MantaSaddle'" },
             { name: "Mantis Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_MantisSaddle.PrimalItemArmor_MantisSaddle'" },
+            { name: "Megal Shark Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_MegalodonSaddle.PrimalItemArmor_MegalodonSaddle'" },
             { name: "Megalodon Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_MegalodonSaddle.PrimalItemArmor_MegalodonSaddle'" },
             { name: "Megalania Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_MegalaniaSaddle.PrimalItemArmor_MegalaniaSaddle'" },
             { name: "Megachelon Platform Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_MegachelonSaddle_Platform.PrimalItemArmor_MegachelonSaddle_Platform'" },
@@ -203,6 +204,7 @@
             { name: "Sand Dragon Saddle (DC)", path: "Blueprint'/DraconicChronicles/Saddles/SandDragon/PrimalItemArmor_SandDragonSaddle.PrimalItemArmor_SandDragonSaddle'" },
             { name: "Sarcosuchus Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_SarcoSaddle.PrimalItemArmor_SarcoSaddle'" },
             { name: "Scorpion Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_ScorpionSaddle.PrimalItemArmor_ScorpionSaddle'" },
+            { name: "Snow Dragon Saddle", path: "Blueprint'/Game/LostColony/Dinos/SnowDragon/PrimalItemArmor_SnowDragonSaddle.PrimalItemArmor_SnowDragonSaddle'" },
             { name: "Snow Owl Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_SnowOwlSaddle.PrimalItemArmor_SnowOwlSaddle'" },
             { name: "Solwyn Saddle (Angel Fox)", path: "Blueprint'/Game/LostColony/Dinos/AngelFox/PrimalItemArmor_AngelFoxSaddle.PrimalItemArmor_AngelFoxSaddle'" },
             { name: "Spinosaurus Saddle", path: "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_SpinoSaddle.PrimalItemArmor_SpinoSaddle'" },
