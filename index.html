@@ -55,7 +55,7 @@
 
             <div id="blueprintPathContainer">
                 <label for="saddleSearch" class="block text-sm font-medium text-ark-gold mb-1 uppercase tracking-wider">Search Every Saddle</label>
-                <input type="text" id="saddleSearch" placeholder="Type name (Aureliax, Malwyn, Rex)..." onkeyup="filterSaddles()"
+                <input type="text" id="saddleSearch" placeholder="Type name (Aureliax, Rex, Malwyn)..." onkeyup="filterSaddles()"
                        class="w-full px-4 py-3 border-2 border-ark-purple/50 rounded-lg focus:ring-ark-cyan focus:border-ark-cyan shadow-inner bg-ark-black text-white mb-4 placeholder-gray-600">
                 
                 <label for="blueprintSelector" class="block text-sm font-medium text-ark-gold mb-1 uppercase tracking-wider">Select Saddle</label>
@@ -165,7 +165,7 @@
             { name: "Malwyn Saddle (Devil Fox)", path: "/Game/LostColony/Dinos/DevilFox/PrimalItemArmor_DevilFoxSaddle.PrimalItemArmor_DevilFoxSaddle" },
             { name: "Mammoth Saddle", path: "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_MammothSaddle.PrimalItemArmor_MammothSaddle" },
             { name: "Manta Saddle", path: "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_MantaSaddle.PrimalItemArmor_MantaSaddle" },
-            { name: "Mantis Saddle", path: "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_MantisSaddle.PrimalItemArmor_MantisSaddle" },
+            { name: "Mantis Saddle", path: "/Game/ScorchedEarth/Dinos/Mantis/PrimalItemArmor_MantisSaddle.PrimalItemArmor_MantisSaddle" },
             { name: "Megal Shark Saddle", path: "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_MegalodonSaddle.PrimalItemArmor_MegalodonSaddle" },
             { name: "Megalodon Saddle", path: "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_MegalodonSaddle.PrimalItemArmor_MegalodonSaddle" },
             { name: "Megalania Saddle", path: "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_MegalaniaSaddle.PrimalItemArmor_MegalaniaSaddle" },
@@ -255,7 +255,7 @@
             const id = characterIdInput.value.trim();
             const p = blueprintSelector.value;
             const b = isBlueprintCheckbox.checked ? 1 : 0;
-            // Strict format: giveitemtoplayer [ID] [PATH] 1 100 [0/1]
+            // Clean format: giveitemtoplayer ID PATH 1 100 0
             commandOutput.value = `giveitemtoplayer ${id ? id + ' ' : ''}${p} 1 100 ${b}`;
         }
 
