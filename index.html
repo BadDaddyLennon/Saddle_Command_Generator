@@ -152,6 +152,8 @@
             { name: "Gigantoraptor Saddle", path: "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_GigantoraptorSaddle.PrimalItemArmor_GigantoraptorSaddle" },
             { name: "Giganotosaurus Saddle", path: "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_GigantSaddle.PrimalItemArmor_GigantSaddle" },
             { name: "Glaucus Saddle (Modded)", path: "/Glaucus/Content/Saddle/PrimalItemArmor_GlaucusSaddle.PrimalItemArmor_GlaucusSaddle" },
+            { name: "Grand Tortuga Saddle", path: "/Game/ASA/Dinos/GrandTortugar/Saddle/PrimalItemArmor_GrandTortugaSaddle.PrimalItemArmor_GrandTortugaSaddle" },
+            { name: "Grand Tortugar Platform Saddle", path: "/Game/ASA/Dinos/GrandTortugar/Saddle/PrimalItemArmor_GrandTortugar_Platform.PrimalItemArmor_GrandTortugar_Platform" },
             { name: "Helicoprion Saddle", path: "/Game/ASA/Dinos/Helicoprion/Saddle/PrimalItemArmor_Helicoprion.PrimalItemArmor_Helicoprion" },
             { name: "Horse Saddle", path: "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_EquusSaddle.PrimalItemArmor_EquusSaddle" },
             { name: "Ice Wyvern Armor (DC)", path: "/DraconicChronicles/Saddles/IceWyvern/PrimalItemArmor_IceWyvernArmor.PrimalItemArmor_IceWyvernArmor" },
@@ -255,7 +257,6 @@
             const id = characterIdInput.value.trim();
             const p = blueprintSelector.value;
             const b = isBlueprintCheckbox.checked ? 1 : 0;
-            // Clean format: giveitemtoplayer ID PATH 1 100 0
             commandOutput.value = `giveitemtoplayer ${id ? id + ' ' : ''}${p} 1 100 ${b}`;
         }
 
